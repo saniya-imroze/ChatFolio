@@ -6,14 +6,13 @@ import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
 
 // PASTE YOUR FIREBASE CONFIG HERE
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-};
-
+    apiKey: "AIzaSyDlUlL2uVyLNfWi7lfug3yDVjgTkyVxHoc",
+    authDomain: "chatfolio-3fef1.firebaseapp.com",
+    projectId: "chatfolio-3fef1",
+    storageBucket: "chatfolio-3fef1.firebasestorage.app",
+    messagingSenderId: "190243757000",
+    appId: "1:190243757000:web:5eda6207d9ebe3d67f7efd"
+  };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -24,12 +23,12 @@ const portfolioData = {
     name: "J.D" // Replace with your name if different
   },
   projects: [
-    { id: "proj1", title: "Portfolio Website", description: "My personal portfolio built with React, Next.js, and Tailwind CSS, showcasing my skills and projects. Deployed on Vercel.", tech: ["React", "Next.js", "Tailwind CSS", "Vercel"], url: "https://si-portfolio.vercel.app/" },
-    { id: "proj2", title: "Another Cool Project", description: "Describe another one of your key projects here.", tech: ["Node.js", "Express", "MongoDB"], url: "https://example.com" }
+    { id: "proj1", title: "TaskPilot - Productivity Suite", description: "A productivity web app that helps users manage daily tasks and goals. Features include drag-and-drop boards, calendar sync, and real-time collaboration using WebSockets.", tech: ["React", "Next.js", "Tailwind CSS", "Vercel"], url: "" },
+    { id: "proj2", title: "MediMetrics - Health Analytic", description: "A platform for hospitals to track, analyze, and visualize patient vitals and diagnostics. Designed dashboards with D3.js and handled large datasets using AWS Lambda.", tech: ["Node.js", "Express", "MongoDB"], url: "https://example.com" }
     // Add more projects
   ],
   experience: [
-    { id: "exp1", company: "Company A", role: "Frontend Developer", duration: "Jan 2023 - Present", responsibilities: "Developed and maintained user-facing features using React.js, collaborated with designers and backend developers, and optimized applications for speed and scalability." }
+    { id: "exp1", company: "TechNova Solutions", role: "Frontend Developer", duration: "Jan 2023 - Present", responsibilities: "Leading the development of a cloud-native SaaS platform, enhancing scalability and security across services. Collaborated with cross-functional teams to optimize frontend performance and CI/CD pipelines. Integrated third-party APIs and used serverless architecture to reduce infrastructure overhead." }
     // Add more experience
   ],
   skills: {
