@@ -6,13 +6,14 @@ import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
 
 // PASTE YOUR FIREBASE CONFIG HERE
 const firebaseConfig = {
-    apiKey: "AIzaSyDlUlL2uVyLNfWi7lfug3yDVjgTkyVxHoc",
-    authDomain: "chatfolio-3fef1.firebaseapp.com",
-    projectId: "chatfolio-3fef1",
-    storageBucket: "chatfolio-3fef1.firebasestorage.app",
-    messagingSenderId: "190243757000",
-    appId: "1:190243757000:web:5eda6207d9ebe3d67f7efd"
-  };
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
+
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
